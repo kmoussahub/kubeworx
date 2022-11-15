@@ -1,0 +1,80 @@
+[
+  {
+    "aadProfile": null,
+    "addonProfiles": {
+      "aciConnectorLinux": {
+        "config": {
+          "SubnetName": "virtual-node-aci"
+        },
+        "enabled": true
+      },
+      "azurepolicy": {
+        "config": null,
+        "enabled": true
+      },
+      "httpApplicationRouting": {
+        "config": null,
+        "enabled": false
+      },
+      "omsagent": {
+        "config": {
+          "logAnalyticsWorkspaceResourceID": "/subscriptions/78bd8a20-bb09-4c10-9d82-d88b45674c66/resourcegroups/defaultresourcegroup-weu/providers/microsoft.operationalinsights/workspaces/defaultworkspace-78bd8a20-bb09-4c10-9d82-d88b45674c66-weu"
+        },
+        "enabled": true
+      }
+    },
+    "agentPoolProfiles": [
+      {
+        "availabilityZones": null,
+        "count": 4,
+        "enableAutoScaling": true,
+        "enableNodePublicIp": null,
+        "maxCount": 5,
+        "maxPods": 30,
+        "minCount": 1,
+        "name": "agentpool",
+        "nodeTaints": null,
+        "orchestratorVersion": "1.14.6",
+        "osDiskSizeGb": 100,
+        "osType": "Linux",
+        "provisioningState": "Succeeded",
+        "scaleSetEvictionPolicy": null,
+        "scaleSetPriority": null,
+        "type": "VirtualMachineScaleSets",
+        "vmSize": "Standard_B2ms",
+        "vnetSubnetId": "/subscriptions/78bd8a20-bb09-4c10-9d82-d88b45674c66/resourceGroups/cloudNative/providers/Microsoft.Network/virtualNetworks/cloudNativevnet789/subnets/default"
+      }
+    ],
+    "apiServerAccessProfile": null,
+    "dnsPrefix": "cn01-dns",
+    "enablePodSecurityPolicy": false,
+    "enableRbac": true,
+    "fqdn": "cn01-dns-1ec06760.hcp.westeurope.azmk8s.io",
+    "id": "/subscriptions/78bd8a20-bb09-4c10-9d82-d88b45674c66/resourcegroups/cloudNative/providers/Microsoft.ContainerService/managedClusters/cn01",
+    "identity": null,
+    "kubernetesVersion": "1.14.6",
+    "linuxProfile": null,
+    "location": "westeurope",
+    "maxAgentPools": 8,
+    "name": "cn01",
+    "networkProfile": {
+      "dnsServiceIp": "10.0.0.10",
+      "dockerBridgeCidr": "172.17.0.1/16",
+      "loadBalancerProfile": null,
+      "loadBalancerSku": "Basic",
+      "networkPlugin": "azure",
+      "networkPolicy": null,
+      "podCidr": null,
+      "serviceCidr": "10.0.0.0/16"
+    },
+    "nodeResourceGroup": "MC_cloudNative_cn01_westeurope",
+    "privateFqdn": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "cloudNative",
+    "servicePrincipalProfile": {
+      "clientId": "eef98c26-ad34-43bf-b4b5-f29fc4f41451"
+    },
+    "type": "Microsoft.ContainerService/ManagedClusters",
+    "windowsProfile": null
+  }
+]

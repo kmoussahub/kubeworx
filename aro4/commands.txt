@@ -1,0 +1,9 @@
+az aro list -o table
+
+az aro list-credentials -g "$RESOURCEGROUP" -n "$CLUSTER"
+
+COUNT=4
+
+az aro update -g "$RESOURCEGROUP" -n "$CLUSTER" --worker-count "$COUNT"
+
+59f11b22315efb0c5e61cb4f8837a39f1c50eb3c

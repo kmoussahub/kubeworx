@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mvcdeploy
+  labels:
+    app: gpm
+    tier: frontend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gpm
+        tier: frontend
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": windows
+      containers:
+      - name: mvccontainer
+        image: gpsmigrationacr.azurecr.io/pilot/clientmvc:latest
+        ports:
+          - containerPort: 80
+  selector:
+    matchLabels:
+      app: gpm
+      tier: frontend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mvcservice
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+  selector:
+    app: gpm
+    tier: frontend

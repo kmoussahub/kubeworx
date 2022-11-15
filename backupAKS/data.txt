@@ -1,0 +1,9 @@
+tenantid 
+5c2d8a60-1ca0-4797-9c2c-0d65923fb46f
+
+appid
+465732b0-1b6b-4c92-ab0f-c6655d59ea78
+
+secret 
+
+m4nASvGo7RlN?c.3sc?]4jUN]td/6qoz
